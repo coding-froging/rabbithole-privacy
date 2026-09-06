@@ -25,3 +25,7 @@ The app has no user-generated content and no social features, and is rated 4+.
 
 ## Contact
 Questions about this policy: contact.petrov@icloud.com
+
+## Support
+
+Questions or problems with the app? Open an issue at https://github.com/coding-froging/rabbithole-privacy/issues and I will answer there.
