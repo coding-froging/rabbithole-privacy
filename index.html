@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rabbit Hole — a calm feed of curious things</title>
+<meta name="description" content="Rabbit Hole is a calm, full-screen iOS feed of genuinely interesting things: Wikipedia, the Met, NASA, iNaturalist, books, films, today's events. No ads, no tracking.">
+<link rel="icon" href="icon.png">
+<style>
+  :root { --bg:#0d0d10; --card:#16161a; --text:#f2f0ea; --muted:#9a968c; --gold:#f7d98c; --amber:#cc9e4d; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:17px/1.55 -apple-system, "SF Pro Text", Inter, system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+  a { color:var(--gold); text-decoration:none; } a:hover { text-decoration:underline; }
+  .wrap { max-width:960px; margin:0 auto; padding:0 24px; }
+  header { padding:72px 0 40px; display:flex; gap:28px; align-items:center; flex-wrap:wrap; }
+  header img { width:112px; height:112px; border-radius:26px; box-shadow:0 20px 60px rgba(247,217,140,.15); }
+  h1 { font-size:44px; margin:0 0 6px; letter-spacing:-.02em; font-family:-apple-system, "SF Pro Rounded", system-ui, sans-serif; }
+  .tag { color:var(--muted); font-size:20px; margin:0; }
+  .cta { display:inline-block; margin-top:18px; padding:12px 18px; border-radius:999px; background:var(--gold); color:#111; font-weight:600; }
+  .cta.soon { background:transparent; border:1px solid #333; color:var(--muted); cursor:default; }
+  .hero { display:grid; grid-template-columns:1.2fr 1fr; gap:40px; align-items:center; padding:20px 0 60px; }
+  .hero p { font-size:19px; color:#d8d5cc; }
+  .shots { display:flex; gap:16px; justify-content:center; }
+  .shots img { width:46%; border-radius:28px; box-shadow:0 30px 80px rgba(0,0,0,.6); border:1px solid #222; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:14px; padding:0 0 60px; }
+  .card { background:var(--card); border:1px solid #222; border-radius:18px; padding:18px 20px; }
+  .card b { display:block; color:var(--gold); margin-bottom:4px; font-family:-apple-system, "SF Pro Rounded", system-ui, sans-serif; }
+  .card span { color:var(--muted); font-size:15px; }
+  h2 { font-size:28px; margin:0 0 16px; letter-spacing:-.01em; font-family:-apple-system, "SF Pro Rounded", system-ui, sans-serif; }
+  section { padding:0 0 56px; }
+  .policy h3 { font-size:18px; margin:26px 0 8px; color:var(--gold); }
+  .policy p, .policy li { color:#cfcbc2; font-size:16px; }
+  .policy ul { padding-left:22px; } .muted { color:var(--muted); }
+  footer { color:var(--muted); font-size:14px; padding:20px 0 60px; border-top:1px solid #222; }
+  @media (max-width:760px) { .hero { grid-template-columns:1fr; } h1 { font-size:34px; } header { padding-top:48px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="icon.png" alt="Rabbit Hole icon">
+    <div>
+      <h1>Rabbit Hole</h1>
+      <p class="tag">A calm feed of curious things.</p>
+      <span class="cta soon">Coming to the App Store</span>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div>
+      <p>Full-screen cards from Wikipedia, the Met, NASA, iNaturalist, Open Library and Wikimedia Commons, picked by your interests: motorcycles, abandoned places, space, books, films, albums, today in the world, and more.</p>
+      <p>No likes, no comments, no notifications, no account, no ads. The feed stays partly random on purpose, so it never traps you. When something catches you, press <b>Deeper</b> and follow the thread as far down the hole as you like.</p>
+    </div>
+    <div class="shots">
+      <img src="shot-feed.png" alt="A card in the feed">
+      <img src="shot-deeper.png" alt="Deeper: related cards">
+    </div>
+  </div>
+
+  <section>
+    <h2>Gestures</h2>
+    <div class="grid">
+      <div class="card"><b>Tap</b><span>read the whole story</span></div>
+      <div class="card"><b>Swipe right</b><span>save it for later, export to Markdown</span></div>
+      <div class="card"><b>Swipe left</b><span>see less like this — the taste model lives on your phone and is editable</span></div>
+      <div class="card"><b>Deeper</b><span>related cards: same artist, author, animal family, category, or Wikipedia’s “more like this”</span></div>
+      <div class="card"><b>Pinch</b><span>look closer at the photo</span></div>
+      <div class="card"><b>Hold</b><span>open the source</span></div>
+    </div>
+  </section>
+
+  <section class="policy" id="privacy">
+    <h2>Privacy Policy</h2>
+    <p>Rabbit Hole is an iOS app that shows a feed of content from public sources. It is built to collect nothing.</p>
+<h3>What the app does not do</h3>
+<ul>
+<li>No accounts, no sign-in.</li>
+<li>No analytics, no crash reporting, no advertising, no tracking of any kind.</li>
+<li>No data is sent to the developer.</li>
+</ul>
+<h3>What stays on your device</h3>
+<ul>
+<li>Saved cards and your settings (interests, languages, optional API keys) are stored only on your device. API keys are kept in the iOS Keychain.</li>
+<li>The "taste" model — what you swiped left on, saved, opened or lingered on — is a small set of numbers stored only on your device. You can see, edit and reset it in Settings → Taste. It never leaves the phone.</li>
+<li>Images are cached on the device to save traffic.</li>
+</ul>
+<h3>Network requests</h3>
+<p>To show content, the app talks directly to public APIs: Wikipedia and Wikimedia Commons (Wikimedia Foundation), The Metropolitan Museum of Art, NASA (Astronomy Picture of the Day), iNaturalist and Open Library (Internet Archive). These services see your IP address and the request, as any website would. Their own privacy policies apply to those requests. Links you open from a card are shown in an in-app Safari view, which follows Safari's own privacy settings.</p>
+<h3>Location</h3>
+<p>If you turn on “Places nearby” in Settings, the app asks for location access. Your location is used only on the device to pick a random spot within 200 km of you and to ask Wikipedia for articles around that spot. The coordinates sent to Wikipedia are of that random spot, not your exact position. The app never stores your location history and never sends it to the developer. You can turn the interest off or revoke the permission in iOS Settings at any time.</p>
+<h3>Children</h3>
+<p>The app has no user-generated content and no social features, and is rated 4+.</p>
+<h3>Contact</h3>
+<p>Questions about this policy: contact.petrov@icloud.com</p>
+<h3>Support</h3>
+<p>Questions or problems with the app? Open an issue at <a href="https://github.com/coding-froging/rabbithole-privacy/issues">https://github.com/coding-froging/rabbithole-privacy/issues</a> and I will answer there.</p>
+  </section>
+
+  <footer>
+    Rabbit Hole is made by Roman Petrov. Content belongs to its authors and is always shown with a link to the source.
+    Questions: <a href="https://github.com/coding-froging/rabbithole-privacy/issues">open an issue</a>.
+  </footer>
+</div>
+</body>
+</html>
